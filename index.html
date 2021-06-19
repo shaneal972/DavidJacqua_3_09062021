@@ -5,12 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood - Les meilleurs restaurants</title>
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/a9e82795e2.js" crossorigin="anonymous"></script>
     <!--Normalize.css-->
     <link rel="stylesheet" href="sass/vendors/normalize.css">
     <!--Styles personnalisés-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="/" title="Lien vers la page accueil du site"><img src="./images/logo/ohmyfood@2x.svg" alt="Logo du site"></a>
+            </div>
+            <div class="localisation">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Paris, Belleville</p>
+            </div>
+        </header><!--Fin header-->
+        <main>
+            <section class="jumbotron">
+                <h1>Réserver le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a href="#" class="btn" title="lien vers la page des restaurants">
+                    Explorer nos restaurants
+                </a>
+            </section><!--Fin section.jumbotron-->
+            <section class="services">
+                <h2>Fonctionnement</h2>
+                <article class="services--item">
+                    <div class="services--item--one"><i class="fas fa-circle"></i><span>1</span></div>
+                    <div class="services--item--choisir">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                </article>
+                <article class="services--item">
+                    <div class="services--item--two"><i class="fas fa-circle"></i><span>2</span></div>
+                    <div class="services--item--composer">
+                        <i class="fas fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+                    </div>
+                </article>
+                <article class="services--item">
+                    <div class="services--item--three"><i class="fas fa-circle"></i><span>3</span></div>
+                    <div class="services--item--manger">
+                        <i class="fas fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                    </div>
+                </article>
+            </section><!--Fin section.service-->
+            <section class="restaurants">
+                <h2>Restaurants</h2>
+                <article class="restaurants--item">
+                    <figure>
+                        <img src="./images/restaurants/palette-du-gout.jpg" 
+                        alt="Restaurant la palette du goût">
+                        <figcaption>
+                            <div>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="far fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="restaurants--item">
+                    <figure>
+                        <img src="./images/restaurants/note-enchantee.jpg" 
+                        alt="Restaurant la note enchantée">
+                        <figcaption>
+                            <div>
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="far fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="restaurants--item">
+                    <figure>
+                        <img src="./images/restaurants/a-la-francaise.jpg" 
+                        alt="Restaurant a la française">
+                        <figcaption>
+                            <div>
+                                <h3>&Agrave; la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="far fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="restaurants--item">
+                    <figure>
+                        <img src="./images/restaurants/delice-des-sens.jpg" 
+                        alt="Restaurant le délice des sens">
+                        <figcaption>
+                            <div>
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="far fa-heart"></i>
+                        </figcaption>
+                    </figure>
+                </article>
+            </section><!--Fin section.restaurants-->
+        </main><!--Fin main-->
+        <footer>
+            <nav class="navigation--footer">
+                <a href="/" class="navigation--footer-item">
+                    <img src="./images/logo/ohmyfood@2x.svg" alt="logo">
+                </a>
+                <div class="navigation--footer-item">
+                    <i class="fas fa-utensils"></i>
+                    <a href="#">Proposer un restaurant</a>
+                </div>
+                <div class="navigation--footer-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <a href="#">Devenir partenaire</a>
+                </div>
+                <a href="#" class="navigation--footer-item">
+                    Mentions légales
+                </a>
+                <a href="#" class="navigation--footer-item">
+                    Contact
+                </a>
+            </nav>
+        </footer><!--Fin footer-->
+    </div><!--Fin container-->
 </body>
 </html>
