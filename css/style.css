@@ -1,6 +1,67 @@
-/* Couleurs du site */
-/* Polices */
+.logo, .localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Taille du container en fonction des breakpoints*/
+@media (min-width: 576px) {
+  .container {
+    width: 518.4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 691.2px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 892.8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1080px;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  height: 65px;
+}
+
+.logo img {
+  width: 160px;
+  height: 30px;
+}
+
+.localisation {
+  background: #EAEAEA;
+}
+
+.localisation .fa-map-marker-alt {
+  margin-right: 25px;
+}
+
+.localisation p {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

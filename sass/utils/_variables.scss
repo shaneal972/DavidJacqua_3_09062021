@@ -1,8 +1,20 @@
-/* Couleurs du site */
+// Couleurs du site 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
-/* Polices */
+// Polices
 $text-title: 'Shrikhand', cursive;
 $text-body: 'Roboto', sans-serif;
+
+
+// Définition des différents breakpoints
+$grille: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+// Mes fonds
+$backgrounds: ('localisation': #EAEAEA);

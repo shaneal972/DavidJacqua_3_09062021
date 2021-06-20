@@ -1,7 +1,54 @@
 @import './utils/variables';
+@import './utils/placeholders';
 
 
+/*Taille du container en fonction des breakpoints*/
+@each $nom, $breakpoint in $grille {
+    @media (min-width: $breakpoint) {
+        .container{
+            width: $breakpoint * 0.9;
+        }
+    }
+}
+
+// .container {
+//     width: 375px * 0.9;
+//     margin: 0 auto;
+// }
+
+html {
+    font-size: 16px;
+}
 
 body {
     font-family: $text-body;
 }
+
+.logo {
+    height: 65px;
+    @extend %center-flex;
+
+    img {
+        width: 160px;
+        height: 30px;
+    }
+}
+
+.localisation {
+    background: #EAEAEA;
+
+    @extend %center-flex;
+
+    .fa-map-marker-alt {
+        margin-right: 25px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+
+
+
