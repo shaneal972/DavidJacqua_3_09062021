@@ -7,6 +7,9 @@ $tertiary-color: #99E2D0;
 $text-title: 'Shrikhand', cursive;
 $text-body: 'Roboto', sans-serif;
 
+// Taille de polices
+$size-base: 16px;
+
 
 // Définition des différents breakpoints
 $grille: (
@@ -17,4 +20,5 @@ $grille: (
 );
 
 // Mes fonds
+$bg-gris-fonce: #F6F6F6;
 $backgrounds: ('localisation': #EAEAEA);

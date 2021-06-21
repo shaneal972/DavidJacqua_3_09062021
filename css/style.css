@@ -10,7 +10,6 @@
           align-items: center;
 }
 
-/*Taille du container en fonction des breakpoints*/
 @media (min-width: 576px) {
   .container {
     width: 518.4px;
@@ -35,7 +34,7 @@
   }
 }
 
-html {
+html, body {
   font-size: 16px;
 }
 
@@ -54,6 +53,8 @@ body {
 
 .localisation {
   background: #EAEAEA;
+  -webkit-box-shadow: -2px 11px 4px -7px rgba(0, 0, 0, 0.62) inset;
+          box-shadow: -2px 11px 4px -7px rgba(0, 0, 0, 0.62) inset;
 }
 
 .localisation .fa-map-marker-alt {
@@ -63,5 +64,129 @@ body {
 .localisation p {
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.jumbotron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 320px;
+  background: #F6F6F6;
+}
+
+.jumbotron h1 {
+  margin: 0;
+  width: 245px;
+  height: 60px;
+  font-size: 1.55rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.jumbotron p {
+  width: 315px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.12rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.btn {
+  text-decoration: none;
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-10%, #FF79DA), color-stop(85%, #9356DC));
+  background: linear-gradient(to bottom, #FF79DA -10%, #9356DC 85%);
+  -webkit-box-shadow: -1px 5px 10px -5px #3f423f;
+          box-shadow: -1px 5px 10px -5px #3f423f;
+  border-radius: 25px;
+  width: 215px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 1.2;
+  margin-bottom: 25px;
+}
+
+/* Services */
+.services {
+  height: 445px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.services h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.services--item {
+  position: relative;
+  width: 350px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F6F6F6;
+  border-radius: 25px;
+}
+
+.services--item--one, .services--item--two, .services--item--three {
+  position: relative;
+}
+
+.services--item--one .fa-circle, .services--item--two .fa-circle, .services--item--three .fa-circle {
+  font-size: 1.5rem;
+  color: #9356DC;
+}
+
+.services--item--one span, .services--item--two span, .services--item--three span {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+}
+
+.services--item--choisir, .services--item--composer, .services--item--manger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services--item--choisir .svg-inline--fa, .services--item--composer .svg-inline--fa, .services--item--manger .svg-inline--fa {
+  margin: 0 20px;
+  font-size: 1.3rem;
+}
+
+.services--item--choisir p, .services--item--composer p, .services--item--manger p {
+  font-weight: 600;
+  letter-spacing: 1.4;
 }
 /*# sourceMappingURL=style.css.map */
