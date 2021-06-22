@@ -1,0 +1,154 @@
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 320px;
+    background: map-get($backgrounds, gris-fonce);
+
+    h1 {
+        margin: 0;
+        width: 245px;
+        height: 60px;
+        font-size: 1.55rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    p {
+        width: 315px;
+        height: 60px;
+        text-align: center;
+        font-size: 1.12rem;
+        margin: 0;
+        font-weight: 400;
+    }
+
+}
+
+
+
+/* Services */
+.services {
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h2 {
+        font-size: 1.3rem;
+        margin: 0 15px;
+    }
+
+    &--item {
+        position: relative;
+        margin: 0 20px;
+        width: 350px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        background: map-get($backgrounds, gris-fonce);
+        border-radius: 25px;
+        @include shadow(5px, 8px, 10px, -2px);
+
+        &--one, &--two, &--three {
+            position: relative;
+            left: -10px;
+            .fa-circle {
+                font-size: 1.5rem;
+                color: $primary-color;
+            }
+
+            span {
+                position: absolute;
+                top: 5px;
+                left: 8px;
+                color: #FFFFFF;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &--item--choisir, 
+    &--item--composer,
+    &--item--manger {
+        display: flex;
+        align-items: center;
+
+        .svg-inline--fa {
+            margin: 0 25px 0 20px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-weight: 600;
+            letter-spacing: 1.4;
+        }
+
+    }
+}
+
+/* Restaurants */
+.restaurants {
+    height: 1225px;
+    background-color: map-get($backgrounds, gris-fonce);
+    margin-top: 20px;
+    padding: 20px 15px 0 15px;
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    &--item {
+        width: 340px;
+        height: 260px;
+        border-radius: 10px;
+        background: #FFFFFF;
+        margin-bottom: 20px;
+
+        figure {
+            margin: 0;
+
+            figcaption {
+                position: relative;
+                padding-left: 15px;
+                margin: 15px 0;
+
+                h3, p {
+                    margin: 0;
+                    padding-bottom: 10px;
+                    font-size: 1.2rem;
+                }
+
+                .fa-heart {
+                    position: absolute;
+                    right: 30px;
+                    top: 5px;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+
+    &--item--palette {
+        object-position: 100% 108%;
+    }
+    &--item--enchantee {
+        object-position: 100% 61%;
+    }
+    &--item--francaise {
+        object-position: 100% 108%;
+    }
+    &--item--delices {
+        object-position: 100% 100%;
+    }
+}

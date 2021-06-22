@@ -1,0 +1,14 @@
+.localisation {
+    background: map-get($backgrounds, localisation);
+    box-shadow: -2px 11px 4px -7px rgba(0,0,0,0.62) inset;
+    @extend %center-flex;
+
+    .fa-map-marker-alt {
+        margin-right: 25px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}

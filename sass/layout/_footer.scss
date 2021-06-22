@@ -1,0 +1,48 @@
+/* footer */
+footer {
+    height: 175px;
+    background-color: map-get($backgrounds, footer);
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.navigation--footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    &--item {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+
+        &--home {
+            font-family: $text-title-logo;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        &--icone {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .svg-inline--fa {
+                font-size: 0.9rem;
+            }
+
+            .fa-utensils {
+                margin-right: 24px;
+            }
+
+            .fa-hands-helping {
+                margin-right: 15px;
+            }
+        }
+    }
+}
