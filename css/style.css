@@ -73,6 +73,10 @@ h1 {
   margin: 0.67em 0;
 }
 
+h2, h3 {
+  margin: 0;
+}
+
 /* Grouping content
      ========================================================================== */
 /**
@@ -410,6 +414,7 @@ body {
 }
 
 .btn {
+  display: block;
   text-decoration: none;
   color: #FFFFFF;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-10%, #FF79DA), color-stop(85%, #9356DC));
@@ -424,6 +429,40 @@ body {
   font-size: 0.95rem;
   letter-spacing: 1.2;
   margin-bottom: 25px;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation a {
+  color: #000;
+}
+
+.navigation .logo {
+  width: 320px;
+}
+
+.image-top {
+  margin: 0;
+}
+
+.image-top--item {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menus {
+  background-color: #F6F6F6;
 }
 
 .jumbotron {
@@ -554,6 +593,11 @@ body {
   border-radius: 10px;
   background: #FFFFFF;
   margin-bottom: 20px;
+}
+
+.restaurants--item a {
+  text-decoration: none;
+  color: #000;
 }
 
 .restaurants--item figure {
