@@ -4,7 +4,7 @@
     top: 265px;
     left: 0;
     width: 100%;
-    height: 35px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -17,7 +17,11 @@
         font-size: 1.6rem;
         font-family: $text-title-logo;
         font-weight: normal;
-        padding-right: 30px;
+        padding-right: 20px;
+
+        &--court {
+            padding-right: 35px;
+        }
     }
 
     .fa-heart {
