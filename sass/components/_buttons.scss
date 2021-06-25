@@ -12,4 +12,8 @@
     font-size: 0.95rem;
     letter-spacing: 1.2;
     margin-bottom: 25px;
+
+    &:hover {
+        background:linear-gradient(to bottom, $secondary-color -5%, $primary-color 135%);
+    }
 }

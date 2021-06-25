@@ -71,6 +71,14 @@
                 font-size: 0.9rem;
             }
         }
+
+        &:hover {
+            background: $primary-color-lighter;
+
+            .svg-inline--fa {
+                color: $primary-color;
+            }
+        }
     }
 
     &--item--choisir, 
@@ -97,18 +105,21 @@
     height: 1225px;
     background-color: map-get($backgrounds, gris-fonce);
     margin-top: 20px;
-    padding: 20px 15px 0 15px;
+    padding: 45px 15px 0 15px;
 
     h2 {
         font-size: 1.7rem;
+        padding-bottom: 30px;
     }
 
     &--item {
+        position: relative;
         width: 340px;
         height: 260px;
         border-radius: 10px;
         background: #FFFFFF;
         margin-bottom: 20px;
+        @include shadow(5px, 8px, 10px, -2px);
 
         a {
             text-decoration: none;
@@ -144,6 +155,21 @@
             object-fit: cover;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+        }
+        
+        &--new {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 80px;
+            height: 30px;
+            background: $tertiary-color;
+            font-size: 0.9rem;
+            color: #008766;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 30px;
         }
     }
 
