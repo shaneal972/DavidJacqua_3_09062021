@@ -1,4 +1,4 @@
-.logo, .localisation {
+.spinner, .logo, .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +31,76 @@
 @media (min-width: 1200px) {
   .container {
     width: 1080px;
+  }
+}
+
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  background-color: #99E2D0;
+}
+
+.loading {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+}
+
+.loading--double {
+  border-radius: 50%;
+  border: 6px solid rgba(153, 226, 208, 0.3);
+}
+
+.loading--double::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top: 6px solid #9356DC;
+  border-bottom: 6px solid #9356DC;
+  -webkit-animation: spin 2.2s linear infinite;
+          animation: spin 2.2s linear infinite;
+}
+
+.loading--double::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-right: 6px solid #FF79DA;
+  border-left: 6px solid #FF79DA;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
@@ -854,6 +924,14 @@ body {
   border-radius: 3px;
   text-align: center;
   line-height: 30px;
+}
+
+.restaurants--item--heart-plein {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e72c83), to(#a742c6));
+  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .restaurants--item--palette {
