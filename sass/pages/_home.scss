@@ -145,6 +145,11 @@
                     right: 30px;
                     top: 5px;
                     font-size: 1.6rem;
+
+                    & img {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
             }
         }
@@ -172,14 +177,20 @@
             line-height: 30px;
         }
 
+        &--heart {
+
+            &:hover {
+
+            }
+        }
+
         &--heart-plein {
-            background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%); 
-            background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
-            background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color:transparent;
+           z-index: 3;
+
+            &:hover {
+                z-index: 1;
+                color: linear-gradient(#9c47fc, #356ad2);;
+            }
         }
     }
 

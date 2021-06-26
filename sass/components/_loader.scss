@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     background-color: $tertiary-color;
+    animation: loaderEnd 3s ease-out forwards;
 }
 
 .loading {
@@ -12,6 +13,7 @@
     height: 60px;
     display: inline-block;
     position: relative;
+    
 
     &--double {
         border-radius: 50%;
@@ -28,7 +30,7 @@
             border: 6px solid transparent;
             border-top: 6px solid $primary-color;
             border-bottom: 6px solid $primary-color;
-            animation: spin 2.2s linear infinite;
+            animation: spin 2.2s linear forwards;
         }
 
         &::after {
@@ -42,7 +44,7 @@
             border: 6px solid transparent;
             border-right: 6px solid $secondary-color;
             border-left: 6px solid $secondary-color;
-            animation: spin 3s linear infinite;
+            animation: spin 3s linear forwards;
         }
     }
 
@@ -52,6 +54,22 @@
 @keyframes spin {
     to {transform: rotate(1turn);}
     from {transform: rotate(0);}
+}
+
+@keyframes loaderEnd {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        z-index: -10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+    }
 }
 
 
