@@ -1,4 +1,4 @@
-.spinner, .logo, .localisation {
+.spinner, .logo, .localisation, .menus-entrees--item--details-selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,7 +177,7 @@ h1 {
   margin: 0.67em 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -642,8 +642,13 @@ body {
 }
 
 .menus-entrees--item {
-  display: block;
-  padding: 10px 10px 10px 10px;
+  position: relative;
+  width: 95%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
   margin-bottom: 15px;
   background: #FFF;
   border-radius: 15px;
@@ -651,33 +656,77 @@ body {
           box-shadow: 2px 5px 7px 1px rgba(86, 88, 86, 0.15);
 }
 
-.menus-entrees--item--title {
+.menus-entrees--item--infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+  margin: 0;
+}
+
+.menus-entrees--item--infos-title {
   font-weight: 600;
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 5px;
 }
 
-.menus-entrees--item--infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-}
-
-.menus-entrees--item--infos--garnitures {
+.menus-entrees--item--infos-garnitures {
   font-size: 0.8rem;
 }
 
-.menus-entrees--item--infos--prix {
-  font-weight: 600;
-  margin-right: 10px;
+.menus-entrees--item--details {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menus-entrees--item--details:hover + .menus-entrees--item--details-selected {
+  -webkit-animation: show-selected 3s linear infinite;
+          animation: show-selected 3s linear infinite;
+}
+
+.menus-entrees--item--details-price {
+  display: block;
+  margin-bottom: 13px;
+  animation: translate-price 2000ms linear reverse forwards;
+}
+
+.menus-entrees--item--details-price:hover + .menus-entrees--item--details-selected {
+  -webkit-animation: show-selected 3s linear forwards;
+          animation: show-selected 3s linear forwards;
+}
+
+.menus-entrees--item--details-selected {
+  width: 60px;
+  height: 70px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #99E2D0;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+.menus-entrees--item--details-selected .fa-check-circle {
+  font-size: 1.5rem;
+  color: #FFF;
+  -webkit-animation: rotate-check 2s linear;
+          animation: rotate-check 2s linear;
 }
 
 .menus-plats--item {
@@ -760,6 +809,66 @@ body {
 .menus-desserts--item--infos--prix {
   font-weight: 600;
   margin-right: 10px;
+}
+
+@-webkit-keyframes show-selected {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-selected {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate-check {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate-check {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes translate-price {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 50px);
+  }
+}
+
+@keyframes translate-price {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 50px);
+  }
 }
 
 .container {

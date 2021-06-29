@@ -1,0 +1,27 @@
+@keyframes show-selected {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-check {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes translate-price {
+    from {
+        width: 100%;
+    }
+    to {
+        width: calc(100% - 50px);
+    }
+}
