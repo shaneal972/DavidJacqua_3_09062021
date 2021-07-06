@@ -54,6 +54,7 @@
         background: map-get($backgrounds, gris-fonce);
         border-radius: 25px;
         @include shadow(5px, 8px, 10px, -2px);
+        margin-bottom: 15px;
 
         &--one, &--two, &--three {
             position: relative;

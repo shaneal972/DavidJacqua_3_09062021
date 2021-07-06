@@ -1,0 +1,90 @@
+@media (min-width: map-get($grille, sm)) {
+    .services {
+        h2 {
+            text-align: center;
+        }
+
+        &--item {
+            width: 95%;
+        }
+    }
+
+    .restaurants {
+        h2 {
+            text-align: center;
+        }
+
+        &--item {
+            width: 100%;
+        }
+    }
+
+    .navigation--footer {
+
+        &--item {
+
+            &--home {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grille, md)) {
+    .restaurants {
+        height: auto;
+
+        & > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &--item {
+            width: 48%;
+        }
+    }
+}
+
+
+@media (min-width: map-get($grille, lg)) {
+    
+    .services {
+        height: 280px;
+
+        & > div {
+            display: flex;
+        }
+
+        &--item {
+
+            &--choisir,
+            &--composer,
+            &--manger {
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+   
+}
+
+
+@media (min-width: map-get($grille, xl)) {
+    .services {
+        
+        &--item {
+
+            &--choisir,
+            &--composer,
+            &--manger {
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
