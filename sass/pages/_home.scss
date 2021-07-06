@@ -177,19 +177,17 @@
             line-height: 30px;
         }
 
-        &--heart {
-
-            &:hover {
-
-            }
-        }
+        // &--heart {
+        // }
 
         &--heart-plein {
-           z-index: 3;
+            // color: #FFFFFF;
+            background-clip: text;
+            color: red;
+            transition: all 3s;
 
             &:hover {
-                z-index: 1;
-                color: linear-gradient(#9c47fc, #356ad2);;
+                color: blue;
             }
         }
     }

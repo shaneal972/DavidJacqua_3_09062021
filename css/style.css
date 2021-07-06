@@ -1,4 +1,4 @@
-.spinner, .logo, .localisation, .menus-entrees--item--details-selected {
+.spinner, .logo, .localisation, .menus-entrees--item-price-selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,7 +648,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10px;
+  padding-left: 10px;
   margin-bottom: 15px;
   background: #FFF;
   border-radius: 15px;
@@ -682,51 +682,64 @@ body {
   font-size: 0.8rem;
 }
 
-.menus-entrees--item--details {
-  width: 100px;
+.menus-entrees--item--infos:hover + .menus-entrees--item-price-noselected + .menus-entrees--item-price-selected {
+  z-index: 1;
+  -webkit-animation: show-selected 1000ms ease-out forwards;
+          animation: show-selected 1000ms ease-out forwards;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.menus-entrees--item--infos:hover + .menus-entrees--item-price-noselected + .menus-entrees--item-price-selected .fa-check-circle {
+  -webkit-animation: rotate-check 500ms ease-in-out;
+          animation: rotate-check 500ms ease-in-out;
+}
+
+.menus-entrees--item--infos:hover + .menus-entrees--item-price-noselected {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.menus-entrees--item-price {
+  width: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.menus-entrees--item--details:hover + .menus-entrees--item--details-selected {
-  -webkit-animation: show-selected 3s linear infinite;
-          animation: show-selected 3s linear infinite;
-}
-
-.menus-entrees--item--details-price {
-  display: block;
+.menus-entrees--item-price-noselected {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-bottom: 13px;
-  animation: translate-price 2000ms linear reverse forwards;
+  position: relative;
+  right: -50px;
+  -webkit-transition: all 2000ms;
+  transition: all 2000ms;
 }
 
-.menus-entrees--item--details-price:hover + .menus-entrees--item--details-selected {
-  -webkit-animation: show-selected 3s linear forwards;
-          animation: show-selected 3s linear forwards;
-}
-
-.menus-entrees--item--details-selected {
+.menus-entrees--item-price-selected {
   width: 60px;
   height: 70px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background: #99E2D0;
-  position: absolute;
-  right: 0;
   opacity: 0;
+  z-index: -2;
+  position: relative;
+  right: -30px;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
 }
 
-.menus-entrees--item--details-selected .fa-check-circle {
+.menus-entrees--item-price-selected .fa-check-circle {
   font-size: 1.5rem;
   color: #FFF;
-  -webkit-animation: rotate-check 2s linear;
-          animation: rotate-check 2s linear;
 }
 
 .menus-plats--item {
@@ -812,21 +825,39 @@ body {
 }
 
 @-webkit-keyframes show-selected {
-  from {
+  0% {
     opacity: 0;
-    width: 0;
+    width: -30px;
   }
-  to {
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes show-selected {
-  from {
+  0% {
     opacity: 0;
-    width: 0;
+    width: -30px;
   }
-  to {
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -1075,12 +1106,14 @@ body {
 }
 
 .restaurants--item--heart-plein {
-  z-index: 3;
+  background-clip: text;
+  color: red;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .restaurants--item--heart-plein:hover {
-  z-index: 1;
-  color: linear-gradient(#9c47fc, #356ad2);
+  color: blue;
 }
 
 .restaurants--item--palette {
