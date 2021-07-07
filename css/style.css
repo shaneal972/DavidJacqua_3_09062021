@@ -681,6 +681,7 @@ body {
 }
 
 .menus-entrees__item--infos-garnitures {
+  padding-right: 10px;
   font-size: 0.9rem;
   overflow: hidden;
   white-space: nowrap;
@@ -695,7 +696,7 @@ body {
           transform: translateX(-30px);
 }
 
-.menus-entrees__item--infos:hover + .menus-entrees__item-price--noselected + .menus-entrees__item-price--selected .fa-check-circle {
+.menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
   -webkit-animation: rotate-check 500ms ease-in-out;
           animation: rotate-check 500ms ease-in-out;
 }
@@ -1024,6 +1025,9 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .services h2 {
@@ -1034,7 +1038,7 @@ body {
 .services__item {
   position: relative;
   margin: 0 20px;
-  width: 350px;
+  width: 330px;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1208,7 +1212,7 @@ body {
 
 /* footer */
 footer {
-  height: 175px;
+  height: 140px;
   background-color: #353535;
   color: #FFFFFF;
   padding: 20px;
@@ -1231,6 +1235,7 @@ footer {
 .navigation__footer a {
   color: #FFFFFF;
   text-decoration: none;
+  line-height: 1.4;
 }
 
 .navigation__footer--item {

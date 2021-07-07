@@ -63,6 +63,7 @@
             }
 
             &-garnitures {
+                padding-right: 10px;
                 font-size: 0.9rem;
                 overflow: hidden;
                 white-space: nowrap;
@@ -75,7 +76,7 @@
                 transform: translateX(-30px);
             }
 
-            &:hover + .menus-entrees__item-price--noselected + .menus-entrees__item-price--selected .fa-check-circle {
+            &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
                 animation: rotate-check 500ms ease-in-out;
             }
 
@@ -94,10 +95,12 @@
 
             &-noselected {
                 align-self: flex-end;
-                margin-bottom: 13px;  
+                margin-bottom: 13px; 
                 position: relative;
                 right: -50px;
-                transition: all 2000ms;              
+                transition: all 2000ms;
+                
+               
             }
 
             &-selected {
