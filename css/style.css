@@ -614,8 +614,9 @@ body {
 
 .nos-menus {
   background-color: #F6F6F6;
-  height: 1195px;
+  height: auto;
   padding: 0 20px;
+  padding-bottom: 35px;
 }
 
 .nos-menus h2 {
@@ -668,19 +669,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 75%;
+  width: 73%;
   margin: 0;
 }
 
 .menus-entrees--item--infos-title {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   margin-top: 0;
   margin-bottom: 5px;
 }
 
 .menus-entrees--item--infos-garnitures {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menus-entrees--item--infos:hover + .menus-entrees--item-price-noselected + .menus-entrees--item-price-selected {
@@ -900,6 +904,70 @@ body {
   }
   to {
     width: calc(100% - 50px);
+  }
+}
+
+@media (min-width: 576px) {
+  .services h2 {
+    text-align: center;
+  }
+  .services--item {
+    width: 95%;
+  }
+  .restaurants h2 {
+    text-align: center;
+  }
+  .restaurants--item {
+    width: 100%;
+  }
+  .navigation--footer--item--home {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-restaurant {
+    width: 90%;
+    left: 38px;
+  }
+  .restaurants {
+    height: auto;
+  }
+  .restaurants > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurants--item {
+    width: 48%;
+  }
+  .menus-entrees--item {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .services {
+    height: 280px;
+  }
+  .services > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .services--item--choisir p, .services--item--composer p, .services--item--manger p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services--item--choisir p, .services--item--composer p, .services--item--manger p {
+    font-size: 1.2rem;
   }
 }
 
@@ -1219,6 +1287,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .title-restaurant {
+    width: 90%;
+    left: 38px;
+  }
   .restaurants {
     height: auto;
   }
@@ -1234,6 +1306,9 @@ footer {
   }
   .restaurants--item {
     width: 48%;
+  }
+  .menus-entrees--item {
+    width: 80%;
   }
 }
 

@@ -31,6 +31,12 @@
 }
 
 @media (min-width: map-get($grille, md)) {
+
+    .title-restaurant {
+        width: 90%;
+        left: 38px;
+    }
+
     .restaurants {
         height: auto;
 
@@ -42,6 +48,13 @@
 
         &--item {
             width: 48%;
+        }
+    }
+
+    .menus-entrees {
+
+        &--item {
+            width: 80%;
         }
     }
 }
