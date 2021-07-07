@@ -20,7 +20,7 @@
         }
     }
 
-    &--item {
+    &__item {
 
         a {
             color: #000;
@@ -29,7 +29,7 @@
         
     }
 
-    &--cmd {
+    &__cmd {
         display: block;
         margin: 0 auto;
     }
@@ -37,7 +37,7 @@
 
 .menus-entrees {
 
-    &--item {
+    &__item {
         position: relative;
         width: 95%;
         height: 70px;
@@ -69,23 +69,23 @@
                 text-overflow: ellipsis;
             }
 
-            &:hover + .menus-entrees--item-price-noselected + .menus-entrees--item-price-selected {
+            &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
                 z-index: 1;
                 animation: show-selected 1000ms ease-out forwards;
                 transform: translateX(-30px);
             }
 
-            &:hover + .menus-entrees--item-price-noselected + .menus-entrees--item-price-selected .fa-check-circle {
+            &:hover + .menus-entrees__item-price--noselected + .menus-entrees__item-price--selected .fa-check-circle {
                 animation: rotate-check 500ms ease-in-out;
             }
 
-            &:hover + .menus-entrees--item-price-noselected {
+            &:hover + .menus-entrees__item--price-noselected {
                 transform: translateX(-60px);
                 // transition-delay: 100ms;
             }
         }
 
-        &-price {
+        &--price {
             width: 120px;
             display: flex;
             align-items: flex-end;
@@ -126,7 +126,7 @@
 
 .menus-plats {
 
-    &--item {
+    &__item {
         display: block;
         padding: 10px 10px 10px 10px;
         margin-bottom: 15px;
@@ -163,7 +163,7 @@
 .menus-desserts {
     margin-bottom: 60px;
 
-    &--item {
+    &__item {
         display: block;
         padding: 10px 10px 10px 10px;
         margin-bottom: 15px;

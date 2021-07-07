@@ -44,7 +44,7 @@
         margin: 0 15px;
     }
 
-    &--item {
+    &__item {
         position: relative;
         margin: 0 20px;
         width: 350px;
@@ -82,9 +82,9 @@
         }
     }
 
-    &--item--choisir, 
-    &--item--composer,
-    &--item--manger {
+    &__item--choisir, 
+    &__item--composer,
+    &__item--manger {
         display: flex;
         align-items: center;
 
@@ -113,7 +113,7 @@
         padding-bottom: 30px;
     }
 
-    &--item {
+    &__item {
         position: relative;
         width: 340px;
         height: 260px;
@@ -193,16 +193,16 @@
         }
     }
 
-    &--item--palette {
+    &__item--palette {
         object-position: 100% 108%;
     }
-    &--item--enchantee {
+    &__item--enchantee {
         object-position: 100% 61%;
     }
-    &--item--francaise {
+    &__item--francaise {
         object-position: 100% 108%;
     }
-    &--item--delices {
+    &__item--delices {
         object-position: 100% 100%;
     }
 }
