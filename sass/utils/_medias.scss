@@ -4,7 +4,7 @@
             text-align: center;
         }
 
-        &--item {
+        &__item {
             width: 95%;
         }
     }
@@ -14,16 +14,16 @@
             text-align: center;
         }
 
-        &--item {
+        &__item {
             width: 100%;
         }
     }
 
     .navigation--footer {
 
-        &--item {
+        &__item {
 
-            &--home {
+            &-home {
                 text-align: center;
             }
         }
@@ -33,9 +33,26 @@
 @media (min-width: map-get($grille, md)) {
 
     .title-restaurant {
-        width: 90%;
-        left: 38px;
+        width: 100%;
+        left: 0;
+        justify-content: space-between;
+
+        &__item--court {
+            padding-left: 20px;
+        }
+
+        .fa-heart {
+            padding-right: 35px;
+        }
     }
+
+    .services {
+
+        &__item {
+            width: 460px;
+        }
+    }
+
 
     .restaurants {
         height: auto;
@@ -46,15 +63,22 @@
             justify-content: space-between;
         }
 
-        &--item {
+        &__item {
             width: 48%;
         }
     }
 
-    .menus-entrees {
+   
+    .menus-entrees,
+    .menus-plats,
+    .menus-desserts {
 
-        &--item {
-            width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            width: 49%;
         }
     }
 }
@@ -69,16 +93,40 @@
             display: flex;
         }
 
-        &--item {
+        &__item {
 
-            &--choisir,
-            &--composer,
-            &--manger {
+            width: 300px;
+            flex: 1 1 auto;
+
+            &-choisir,
+            &-composer,
+            &-manger {
 
                 p {
                     font-size: 0.9rem;
                 }
             }
+        }
+    }
+
+    // .restaurants {
+
+    //     &__item {
+           
+    //     }
+
+    // }
+
+    .menus-entrees,
+    .menus-plats,
+    .menus-desserts {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__item {
+            width: 29%;
         }
     }
    
@@ -88,16 +136,58 @@
 @media (min-width: map-get($grille, xl)) {
     .services {
         
-        &--item {
+        &__item {
 
-            &--choisir,
-            &--composer,
-            &--manger {
+            width: 500px;
+            flex: 1 1 auto;
+
+            &-choisir,
+            &-composer,
+            &-manger {
 
                 p {
                     font-size: 1.2rem;
                 }
             }
+        }
+    }
+
+    .restaurants {
+
+        & > div {
+            flex-wrap: nowrap;
+        }
+
+        &__item {
+            width: 24%;
+        }
+    }
+
+    .nos-menus {
+
+        h2 {
+            padding-top: 60px;
+        }
+
+        &__item {
+            width: 600px;
+        }
+
+        article {
+            display: flex;
+        }
+    }
+
+    .menus-entrees,
+    .menus-plats,
+    .menus-desserts {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__item {
+            width: 53%;
         }
     }
 }
