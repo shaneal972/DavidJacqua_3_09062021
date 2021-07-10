@@ -77,7 +77,7 @@
         &:hover {
             background: $primary-color-lighter;
 
-            .svg-inline--fa {
+            .fas {
                 color: $primary-color;
             }
         }
@@ -89,8 +89,13 @@
         display: flex;
         align-items: center;
 
-        .svg-inline--fa {
+        .fas {
             margin: 0 25px 0 20px;
+            font-size: 1.3rem;
+        }
+
+        .fa-mobile-alt {
+            margin: 0 30px 0 20px;
             font-size: 1.3rem;
         }
 
@@ -128,11 +133,28 @@
             color: #000;
         }
 
-        .far-gradient {
-            text-shadow: -1px 2px rgba(128, 128, 128, 0.5);
-            background: -webkit-linear-gradient(whitesmoke, #1e2425);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+        &--heart,
+        &--heart-plein {
+            position: absolute;
+            right: 30px;
+            top: 5px;
+            font-size: 1.6rem;
+            transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        &--heart-plein {
+            opacity: 0;
+
+            &:hover {
+                animation: show-selected 500ms linear forwards;
+                // opacity: 1;
+                background: -webkit-linear-gradient($primary-color, $secondary-color);
+                background: linear-gradient($primary-color, $secondary-color);
+                background: -webkit-gradient(linear, center top, center bottom, from($primary-color), to($secondary-color));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
 
         figure {
@@ -147,18 +169,6 @@
                     margin: 0;
                     padding-bottom: 10px;
                     font-size: 1.2rem;
-                }
-
-                .fa-heart {
-                    position: absolute;
-                    right: 30px;
-                    top: 5px;
-                    font-size: 1.6rem;
-
-                    & img {
-                        width: 32px;
-                        height: 32px;
-                    }
                 }
             }
         }
@@ -185,20 +195,6 @@
             text-align: center;
             line-height: 30px;
         }
-
-        // &--heart {
-        // }
-
-        &--heart-plein {
-            // color: #FFFFFF;
-            background-clip: text;
-            color: red;
-            transition: all 3s;
-
-            &:hover {
-                color: blue;
-            }
-        }
     }
 
     &__item--palette {
@@ -214,12 +210,3 @@
         object-position: 100% 100%;
     }
 }
-
-// i.fa-heart {
-//     background: -webkit-linear-gradient(#9c47fc, #356ad2);
-//     background: -moz-linear-gradient(#9c47fc, #356ad2);
-//     background: linear-gradient(#9c47fc, #356ad2);
-//     // background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-// }

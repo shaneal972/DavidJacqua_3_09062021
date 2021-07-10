@@ -545,45 +545,6 @@ body {
   background: linear-gradient(to bottom, #FF79DA -5%, #9356DC 135%);
 }
 
-.heart.icon {
-  color: #000;
-  position: absolute;
-  margin-top: 6px;
-  margin-left: 5px;
-  width: 9px;
-  height: 9px;
-  border-left: solid 1px currentColor;
-  border-bottom: solid 1px currentColor;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.heart.icon:before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -1px;
-  width: 8px;
-  height: 5px;
-  border-radius: 5px 5px 0 0;
-  border-top: solid 1px currentColor;
-  border-left: solid 1px currentColor;
-  border-right: solid 1px currentColor;
-}
-
-.heart.icon:after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 8px;
-  width: 5px;
-  height: 8px;
-  border-radius: 0 5px 5px 0;
-  border-top: solid 1px currentColor;
-  border-right: solid 1px currentColor;
-  border-bottom: solid 1px currentColor;
-}
-
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1214,7 +1175,7 @@ body {
   background: #f5edff;
 }
 
-.services__item:hover .svg-inline--fa {
+.services__item:hover .fas {
   color: #9356DC;
 }
 
@@ -1227,8 +1188,13 @@ body {
           align-items: center;
 }
 
-.services__item-choisir .svg-inline--fa, .services__item-composer .svg-inline--fa, .services__item-manger .svg-inline--fa {
+.services__item-choisir .fas, .services__item-composer .fas, .services__item-manger .fas {
   margin: 0 25px 0 20px;
+  font-size: 1.3rem;
+}
+
+.services__item-choisir .fa-mobile-alt, .services__item-composer .fa-mobile-alt, .services__item-manger .fa-mobile-alt {
+  margin: 0 30px 0 20px;
   font-size: 1.3rem;
 }
 
@@ -1266,10 +1232,27 @@ body {
   color: #000;
 }
 
-.restaurants__item .far-gradient {
-  text-shadow: -1px 2px rgba(128, 128, 128, 0.5);
-  background: -webkit-linear-gradient(whitesmoke, #1e2425);
+.restaurants__item--heart, .restaurants__item--heart-plein {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  font-size: 1.6rem;
+  -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.restaurants__item--heart-plein {
+  opacity: 0;
+}
+
+.restaurants__item--heart-plein:hover {
+  -webkit-animation: show-selected 500ms linear forwards;
+          animation: show-selected 500ms linear forwards;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1287,18 +1270,6 @@ body {
   margin: 0;
   padding-bottom: 10px;
   font-size: 1.2rem;
-}
-
-.restaurants__item figure figcaption .fa-heart {
-  position: absolute;
-  right: 30px;
-  top: 5px;
-  font-size: 1.6rem;
-}
-
-.restaurants__item figure figcaption .fa-heart img {
-  width: 32px;
-  height: 32px;
 }
 
 .restaurants__item img {
@@ -1323,17 +1294,6 @@ body {
   border-radius: 3px;
   text-align: center;
   line-height: 30px;
-}
-
-.restaurants__item--heart-plein {
-  background-clip: text;
-  color: red;
-  -webkit-transition: all 3s;
-  transition: all 3s;
-}
-
-.restaurants__item--heart-plein:hover {
-  color: blue;
 }
 
 .restaurants__item--palette {
