@@ -2,8 +2,6 @@
 @import './utils/placeholders';
 @import './utils/mixins';
 
-@import './components/loader';
-
 @import './base/normalize';
 @import './base/typography';
 
@@ -12,7 +10,7 @@
 @import './components/localisation';
 @import './components/buttons';
 
-@import './pages/francaise';
+@import './pages/restaurant';
 @import './pages/home';
 
 
@@ -20,4 +18,5 @@
 
 @import './utils/medias';
 
+@import './components/loader';
 

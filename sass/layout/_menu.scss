@@ -36,7 +36,7 @@
 }
 
 .menus-entrees {
-
+    
     &__item {
         position: relative;
         width: 95%;
@@ -47,13 +47,15 @@
         background: #FFF;
         border-radius: 15px;
         @include shadow(2px, 5px, 7px, 1px);
-
+        
         &--infos {
             display: flex;
             justify-content: center;
             flex-direction: column;
             width: 73%;
             margin: 0;
+            
+            
 
             &-title {
                 font-weight: 600;
@@ -197,4 +199,10 @@
             }
         }
     }
+}
+
+.menus-entrees__item-anim,
+.menus-plats__item-anim,
+.menus-desserts__item-anim {
+    animation: apparition-menus 3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

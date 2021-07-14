@@ -109,10 +109,10 @@
 
 /* Restaurants */
 .restaurants {
-    height: 1225px;
+    height: auto;
     background-color: map-get($backgrounds, gris-fonce);
     margin-top: 20px;
-    padding: 45px 15px 0 15px;
+    padding: 45px 15px 15px 15px;
 
     h2 {
         font-size: 1.7rem;
@@ -198,13 +198,17 @@
     &__item--palette {
         object-position: 100% 108%;
     }
+
     &__item--enchantee {
         object-position: 100% 61%;
     }
+
     &__item--francaise {
         object-position: 100% 108%;
     }
+
     &__item--delices {
         object-position: 100% 100%;
     }
+    
 }
