@@ -12,4 +12,13 @@
             width: $breakpoint * 0.9;
         }
     }
+    @if $breakpoint == 1500px {
+        @media (min-width: $breakpoint) {
+            .container{
+                width: 1440px;
+                // overflow-y: auto;
+                // overflow-x: hidden;
+            }
+        }
+    }
 }

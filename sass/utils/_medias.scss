@@ -68,6 +68,16 @@
         }
     }
 
+    .menus-entrees {
+        &__item {
+            &--price {
+                &-noselected {
+                    right: -70px;
+                }
+            }
+        }
+    }
+
    
     .menus-entrees,
     .menus-plats,
@@ -78,8 +88,29 @@
         justify-content: center;
 
         &__item {
-            width: 49%;
+            width: 65%;
         }
+    }
+
+    footer {
+        height: auto;
+    }
+
+   .footer__item {
+       text-align: center;
+
+       &-home {
+        font-family: $text-title-logo;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+   }
+
+    .navigation__footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-top: 20px;
     }
 }
 
@@ -109,13 +140,15 @@
         }
     }
 
-    // .restaurants {
-
-    //     &__item {
-           
-    //     }
-
-    // }
+    .menus-entrees {
+        &__item {
+            &--price {
+                &-noselected {
+                    right: -65px;
+                }
+            }
+        }
+    }
 
     .menus-entrees,
     .menus-plats,
@@ -123,10 +156,11 @@
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         &__item {
-            width: 29%;
+            width: 38%;
+            margin-right: 30px;
         }
     }
    
@@ -138,7 +172,7 @@
         
         &__item {
 
-            width: 500px;
+            width: 410px;
             flex: 1 1 auto;
 
             &-choisir,
@@ -175,6 +209,11 @@
 
         article {
             display: flex;
+            justify-content: center;
+
+            .nos-menus__item-wrapper {
+                width: 33%;
+            }
         }
     }
 
@@ -187,7 +226,7 @@
         align-items: flex-start;
 
         &__item {
-            width: 53%;
+            width: 60%;
         }
     }
 }

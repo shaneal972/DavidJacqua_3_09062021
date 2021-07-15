@@ -28,9 +28,15 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1500px) {
   .container {
-    width: 1728px;
+    width: 1350px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 1440px;
   }
 }
 
@@ -431,7 +437,7 @@ body {
   height: 50px;
   line-height: 50px;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.95em;
   letter-spacing: 1.2;
   margin-bottom: 25px;
 }
@@ -596,8 +602,8 @@ body {
   z-index: 1;
   -webkit-animation: show-selected 1000ms ease-out forwards;
           animation: show-selected 1000ms ease-out forwards;
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
+  -webkit-transform: translateX(-30px) 1000ms;
+          transform: translateX(-30px) 1000ms;
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
@@ -606,8 +612,8 @@ body {
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected {
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
+  -webkit-transform: translateX(-60px) 1000ms;
+          transform: translateX(-60px) 1000ms;
 }
 
 .menus-entrees__item--price {
@@ -898,6 +904,9 @@ body {
   .restaurants__item {
     width: 48%;
   }
+  .menus-entrees__item--price-noselected {
+    right: -70px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -913,7 +922,30 @@ body {
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 49%;
+    width: 65%;
+  }
+  footer {
+    height: auto;
+  }
+  .footer__item {
+    text-align: center;
+  }
+  .footer__item-home {
+    font-family: "Shrikhand", cursive;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  .navigation__footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-top: 20px;
   }
 }
 
@@ -935,6 +967,9 @@ body {
   .services__item-choisir p, .services__item-composer p, .services__item-manger p {
     font-size: 0.9rem;
   }
+  .menus-entrees__item--price-noselected {
+    right: -65px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -943,20 +978,21 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 29%;
+    width: 38%;
+    margin-right: 30px;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1500px) {
   .services__item {
-    width: 500px;
+    width: 410px;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -981,6 +1017,12 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nos-menus article .nos-menus__item-wrapper {
+    width: 33%;
   }
   .menus-entrees,
   .menus-plats,
@@ -999,7 +1041,7 @@ body {
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 53%;
+    width: 60%;
   }
 }
 
@@ -1253,6 +1295,13 @@ footer {
   padding: 20px;
 }
 
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
 .navigation__footer {
   height: 100%;
   display: -webkit-box;
@@ -1267,24 +1316,12 @@ footer {
           justify-content: flex-start;
 }
 
-.navigation__footer a {
-  color: #FFFFFF;
-  text-decoration: none;
-  line-height: 1.4;
-}
-
-.navigation__footer--item {
+.navigation__footer-item {
   font-size: 0.9rem;
   margin-bottom: 5px;
 }
 
-.navigation__footer--item--home {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-}
-
-.navigation__footer--item--icone {
+.navigation__footer-item--icone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1296,15 +1333,15 @@ footer {
           align-items: center;
 }
 
-.navigation__footer--item--icone .svg-inline--fa {
+.navigation__footer-item--icone .svg-inline--fa {
   font-size: 0.9rem;
 }
 
-.navigation__footer--item--icone .fa-utensils {
+.navigation__footer-item--icone .fa-utensils {
   margin-right: 24px;
 }
 
-.navigation__footer--item--icone .fa-hands-helping {
+.navigation__footer-item--icone .fa-hands-helping {
   margin-right: 15px;
 }
 
@@ -1359,6 +1396,9 @@ footer {
   .restaurants__item {
     width: 48%;
   }
+  .menus-entrees__item--price-noselected {
+    right: -70px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1374,7 +1414,30 @@ footer {
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 49%;
+    width: 65%;
+  }
+  footer {
+    height: auto;
+  }
+  .footer__item {
+    text-align: center;
+  }
+  .footer__item-home {
+    font-family: "Shrikhand", cursive;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  .navigation__footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-top: 20px;
   }
 }
 
@@ -1396,6 +1459,9 @@ footer {
   .services__item-choisir p, .services__item-composer p, .services__item-manger p {
     font-size: 0.9rem;
   }
+  .menus-entrees__item--price-noselected {
+    right: -65px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1404,20 +1470,21 @@ footer {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 29%;
+    width: 38%;
+    margin-right: 30px;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1500px) {
   .services__item {
-    width: 500px;
+    width: 410px;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -1442,6 +1509,12 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nos-menus article .nos-menus__item-wrapper {
+    width: 33%;
   }
   .menus-entrees,
   .menus-plats,
@@ -1460,7 +1533,7 @@ footer {
   .menus-entrees__item,
   .menus-plats__item,
   .menus-desserts__item {
-    width: 53%;
+    width: 60%;
   }
 }
 

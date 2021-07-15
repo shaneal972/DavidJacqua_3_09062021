@@ -4,6 +4,14 @@ footer {
     background-color: map-get($backgrounds, footer);
     color: #FFFFFF;
     padding: 20px;
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
 }
 
 .navigation__footer {
@@ -11,22 +19,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    a {
-        color: #FFFFFF;
-        text-decoration: none;
-        line-height: 1.4;
-    }
 
-    &--item {
+    &-item {
         font-size: 0.9rem;
         margin-bottom: 5px;
-
-        &--home {
-            font-family: $text-title-logo;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
 
         &--icone {
             display: flex;

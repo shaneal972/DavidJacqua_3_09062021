@@ -75,7 +75,7 @@
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
                 z-index: 1;
                 animation: show-selected 1000ms ease-out forwards;
-                transform: translateX(-30px);
+                transform: translateX(-30px) 1000ms;
             }
 
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
@@ -83,7 +83,7 @@
             }
 
             &:hover + .menus-entrees__item--price-noselected {
-                transform: translateX(-60px);
+                transform: translateX(-60px) 1000ms;
                 // transition-delay: 100ms;
             }
         }
