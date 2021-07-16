@@ -3,22 +3,33 @@ footer {
     height: 140px;
     background-color: map-get($backgrounds, footer);
     color: #FFFFFF;
-    padding: 20px;
+    padding: 20px 20px 45px 20px;
 
     a {
         color: #FFFFFF;
         text-decoration: none;
-        line-height: 1.4;
-        font-weight: 700;
+        line-height: 1.6;
+        // font-weight: 700;
     }
 
 }
 
+.footer__item {
+    // text-align: center;
+
+    &-home {
+     font-family: $text-title-logo;
+     margin-bottom: 30px;
+     font-size: 1.4rem;
+ }
+}
+
 .navigation__footer {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 15px;
 
     &-item {
         font-size: 0.9rem;

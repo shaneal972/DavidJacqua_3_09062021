@@ -71,8 +71,13 @@
     .menus-entrees {
         &__item {
             &--price {
+
                 &-noselected {
                     right: -70px;
+                }
+
+                &-selected {
+                    right: -58px;
                 }
             }
         }
@@ -94,6 +99,7 @@
 
     footer {
         height: auto;
+        padding: 20px;
     }
 
    .footer__item {
@@ -110,7 +116,6 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: baseline;
-        margin-top: 20px;
     }
 }
 
@@ -143,8 +148,13 @@
     .menus-entrees {
         &__item {
             &--price {
+
                 &-noselected {
                     right: -65px;
+                }
+
+                &-selected {
+                    right: -50px;
                 }
             }
         }
@@ -213,6 +223,21 @@
 
             .nos-menus__item-wrapper {
                 width: 33%;
+            }
+        }
+    }
+
+    .menus-entrees {
+        &__item {
+            &--price {
+
+                &-noselected {
+                    right: -58px;
+                }
+
+                &-selected {
+                    right: -41px;
+                }
             }
         }
     }

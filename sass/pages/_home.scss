@@ -1,5 +1,7 @@
 .container {
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .jumbotron {
@@ -143,9 +145,11 @@
         
         &--heart-plein {
             opacity: 0;
+            transition: opacity 500ms;
 
-            &:hover {
-                animation: show-selected 500ms linear forwards;
+            &:hover,
+            &:active {
+                opacity: 1;
                 background: -webkit-linear-gradient($primary-color, $secondary-color);
                 background: linear-gradient($primary-color, $secondary-color);
                 background: -webkit-gradient(linear, center top, center bottom, from($primary-color), to($secondary-color));

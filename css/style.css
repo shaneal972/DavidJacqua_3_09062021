@@ -28,15 +28,17 @@
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .container {
-    width: 1350px;
+    width: 1296px;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .container {
-    width: 1440px;
+    width: 1360px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -61,6 +63,8 @@ html {
    */
 body {
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /**
@@ -593,27 +597,31 @@ body {
 .menus-entrees__item--infos-garnitures {
   padding-right: 10px;
   font-size: 0.9rem;
-  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
   z-index: 1;
-  -webkit-animation: show-selected 1000ms ease-out forwards;
-          animation: show-selected 1000ms ease-out forwards;
-  -webkit-transform: translateX(-30px) 1000ms;
-          transform: translateX(-30px) 1000ms;
+  -webkit-transform: translateX(-30px) ease-out;
+          transform: translateX(-30px) ease-out;
+  -webkit-animation: show-selected 700ms 400ms linear forwards;
+          animation: show-selected 700ms 400ms linear forwards;
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-  -webkit-animation: rotate-check 500ms ease-in-out;
-          animation: rotate-check 500ms ease-in-out;
+  -webkit-animation: rotate-check 1400ms ease-in-out;
+          animation: rotate-check 1400ms ease-in-out;
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected {
-  -webkit-transform: translateX(-60px) 1000ms;
-          transform: translateX(-60px) 1000ms;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.menus-entrees__item--infos:hover > p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menus-entrees__item--price {
@@ -750,38 +758,44 @@ body {
 @-webkit-keyframes show-selected {
   0% {
     opacity: 0;
-    width: -30px;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
   }
   25% {
     opacity: 0.25;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.25;
   }
   75% {
-    opacity: 0.75;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
   }
 }
 
 @keyframes show-selected {
   0% {
     opacity: 0;
-    width: -30px;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
   }
   25% {
     opacity: 0.25;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.25;
   }
   75% {
-    opacity: 0.75;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
   }
 }
 
@@ -907,6 +921,9 @@ body {
   .menus-entrees__item--price-noselected {
     right: -70px;
   }
+  .menus-entrees__item--price-selected {
+    right: -58px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -926,6 +943,7 @@ body {
   }
   footer {
     height: auto;
+    padding: 20px;
   }
   .footer__item {
     text-align: center;
@@ -945,7 +963,6 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    margin-top: 20px;
   }
 }
 
@@ -970,6 +987,9 @@ body {
   .menus-entrees__item--price-noselected {
     right: -65px;
   }
+  .menus-entrees__item--price-selected {
+    right: -50px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -990,7 +1010,7 @@ body {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .services__item {
     width: 410px;
     -webkit-box-flex: 1;
@@ -1024,6 +1044,12 @@ body {
   .nos-menus article .nos-menus__item-wrapper {
     width: 33%;
   }
+  .menus-entrees__item--price-noselected {
+    right: -58px;
+  }
+  .menus-entrees__item--price-selected {
+    right: -41px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1047,6 +1073,8 @@ body {
 
 .container {
   margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .jumbotron {
@@ -1214,11 +1242,12 @@ body {
 
 .restaurants__item--heart-plein {
   opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 
-.restaurants__item--heart-plein:hover {
-  -webkit-animation: show-selected 500ms linear forwards;
-          animation: show-selected 500ms linear forwards;
+.restaurants__item--heart-plein:hover, .restaurants__item--heart-plein:active {
+  opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
@@ -1292,18 +1321,23 @@ footer {
   height: 140px;
   background-color: #353535;
   color: #FFFFFF;
-  padding: 20px;
+  padding: 20px 20px 45px 20px;
 }
 
 footer a {
   color: #FFFFFF;
   text-decoration: none;
-  line-height: 1.4;
-  font-weight: 700;
+  line-height: 1.6;
+}
+
+.footer__item-home {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
 }
 
 .navigation__footer {
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1314,6 +1348,7 @@ footer a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-top: 15px;
 }
 
 .navigation__footer-item {
@@ -1399,6 +1434,9 @@ footer a {
   .menus-entrees__item--price-noselected {
     right: -70px;
   }
+  .menus-entrees__item--price-selected {
+    right: -58px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1418,6 +1456,7 @@ footer a {
   }
   footer {
     height: auto;
+    padding: 20px;
   }
   .footer__item {
     text-align: center;
@@ -1437,7 +1476,6 @@ footer a {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    margin-top: 20px;
   }
 }
 
@@ -1462,6 +1500,9 @@ footer a {
   .menus-entrees__item--price-noselected {
     right: -65px;
   }
+  .menus-entrees__item--price-selected {
+    right: -50px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1482,7 +1523,7 @@ footer a {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .services__item {
     width: 410px;
     -webkit-box-flex: 1;
@@ -1516,6 +1557,12 @@ footer a {
   .nos-menus article .nos-menus__item-wrapper {
     width: 33%;
   }
+  .menus-entrees__item--price-noselected {
+    right: -58px;
+  }
+  .menus-entrees__item--price-selected {
+    right: -41px;
+  }
   .menus-entrees,
   .menus-plats,
   .menus-desserts {
@@ -1538,6 +1585,8 @@ footer a {
 }
 
 .spinner {
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100vw;
   height: 100vh;
   background-color: #99E2D0;

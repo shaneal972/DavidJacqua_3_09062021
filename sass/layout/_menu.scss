@@ -67,24 +67,28 @@
             &-garnitures {
                 padding-right: 10px;
                 font-size: 0.9rem;
-                overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
             }
 
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
                 z-index: 1;
-                animation: show-selected 1000ms ease-out forwards;
-                transform: translateX(-30px) 1000ms;
+                transform: translateX(-30px) ease-out;
+                animation: show-selected 700ms 400ms linear forwards;
+               
             }
 
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-                animation: rotate-check 500ms ease-in-out;
+                animation: rotate-check 1400ms ease-in-out;
             }
 
             &:hover + .menus-entrees__item--price-noselected {
-                transform: translateX(-60px) 1000ms;
-                // transition-delay: 100ms;
+                transform: translateX(-60px);
+            }
+
+            &:hover > p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         }
 
