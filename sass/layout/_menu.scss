@@ -70,7 +70,7 @@
 
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
                 z-index: 1;
-                transform: translateX(-30px) ease-out;
+                transform: translateX(-30px);
                 animation: show-selected 700ms 400ms linear forwards;
                
             }

@@ -103,7 +103,7 @@
 
         p {
             font-weight: 600;
-            letter-spacing: 1.4;
+            letter-spacing: 0.5px;
         }
 
     }
@@ -153,7 +153,7 @@
                 background: -webkit-linear-gradient($primary-color, $secondary-color);
                 background: linear-gradient($primary-color, $secondary-color);
                 background: -webkit-gradient(linear, center top, center bottom, from($primary-color), to($secondary-color));
-                background-clip: text;
+                background-clip: content-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }

@@ -442,7 +442,7 @@ body {
   line-height: 50px;
   text-align: center;
   font-size: 0.95em;
-  letter-spacing: 1.2;
+  letter-spacing: 0.7px;
   margin-bottom: 25px;
 }
 
@@ -602,8 +602,8 @@ body {
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
   z-index: 1;
-  -webkit-transform: translateX(-30px) ease-out;
-          transform: translateX(-30px) ease-out;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
   -webkit-animation: show-selected 700ms 400ms linear forwards;
           animation: show-selected 700ms 400ms linear forwards;
 }
@@ -1278,7 +1278,7 @@ body {
 
 .services__item-choisir p, .services__item-composer p, .services__item-manger p {
   font-weight: 600;
-  letter-spacing: 1.4;
+  letter-spacing: 0.5px;
 }
 
 /* Restaurants */
@@ -1328,7 +1328,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
