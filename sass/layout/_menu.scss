@@ -24,9 +24,7 @@
 
         a {
             color: #000;
-        }
-
-        
+        }    
     }
 
     &__cmd {
@@ -205,8 +203,18 @@
     }
 }
 
-.menus-entrees__item-anim,
-.menus-plats__item-anim,
-.menus-desserts__item-anim {
-    animation: apparition-menus 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+@for $i from 1 through 4 {
+    .menus-entrees__item-anim-#{$i} {
+        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
+    }
+    .menus-plats__item-anim-#{$i} {
+        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
+    }
+    .menus-desserts__item-anim-#{$i} {
+        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
+    }
+    .menus-desserts__item-anim-#{$i} {
+        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
+    }
 }

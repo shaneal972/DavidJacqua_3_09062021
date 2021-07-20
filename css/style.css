@@ -415,8 +415,8 @@ body {
 .localisation {
   height: 50px;
   background: #EAEAEA;
-  -webkit-box-shadow: -2px 11px 4px -7px rgba(0, 0, 0, 0.62) inset;
-          box-shadow: -2px 11px 4px -7px rgba(0, 0, 0, 0.62) inset;
+  -webkit-box-shadow: -2px 8px 5px -6px rgba(0, 0, 0, 0.62) inset;
+          box-shadow: -2px 8px 5px -6px rgba(0, 0, 0, 0.62) inset;
 }
 
 .localisation .fa-map-marker-alt {
@@ -748,11 +748,84 @@ body {
   margin-right: 10px;
 }
 
-.menus-entrees__item-anim,
-.menus-plats__item-anim,
-.menus-desserts__item-anim {
-  -webkit-animation: apparition-menus 3s cubic-bezier(0.165, 0.84, 0.44, 1);
-          animation: apparition-menus 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+.menus-entrees__item-anim-1 {
+  -webkit-animation: apparition-menus 3s 0.5s ease-in;
+          animation: apparition-menus 3s 0.5s ease-in;
+}
+
+.menus-plats__item-anim-1 {
+  -webkit-animation: apparition-menus 3s 0.5s ease-in;
+          animation: apparition-menus 3s 0.5s ease-in;
+}
+
+.menus-desserts__item-anim-1 {
+  -webkit-animation: apparition-menus 3s 0.5s ease-in;
+          animation: apparition-menus 3s 0.5s ease-in;
+}
+
+.menus-desserts__item-anim-1 {
+  -webkit-animation: apparition-menus 3s 0.5s ease-in;
+          animation: apparition-menus 3s 0.5s ease-in;
+}
+
+.menus-entrees__item-anim-2 {
+  -webkit-animation: apparition-menus 3s 1s ease-in;
+          animation: apparition-menus 3s 1s ease-in;
+}
+
+.menus-plats__item-anim-2 {
+  -webkit-animation: apparition-menus 3s 1s ease-in;
+          animation: apparition-menus 3s 1s ease-in;
+}
+
+.menus-desserts__item-anim-2 {
+  -webkit-animation: apparition-menus 3s 1s ease-in;
+          animation: apparition-menus 3s 1s ease-in;
+}
+
+.menus-desserts__item-anim-2 {
+  -webkit-animation: apparition-menus 3s 1s ease-in;
+          animation: apparition-menus 3s 1s ease-in;
+}
+
+.menus-entrees__item-anim-3 {
+  -webkit-animation: apparition-menus 3s 1.5s ease-in;
+          animation: apparition-menus 3s 1.5s ease-in;
+}
+
+.menus-plats__item-anim-3 {
+  -webkit-animation: apparition-menus 3s 1.5s ease-in;
+          animation: apparition-menus 3s 1.5s ease-in;
+}
+
+.menus-desserts__item-anim-3 {
+  -webkit-animation: apparition-menus 3s 1.5s ease-in;
+          animation: apparition-menus 3s 1.5s ease-in;
+}
+
+.menus-desserts__item-anim-3 {
+  -webkit-animation: apparition-menus 3s 1.5s ease-in;
+          animation: apparition-menus 3s 1.5s ease-in;
+}
+
+.menus-entrees__item-anim-4 {
+  -webkit-animation: apparition-menus 3s 2s ease-in;
+          animation: apparition-menus 3s 2s ease-in;
+}
+
+.menus-plats__item-anim-4 {
+  -webkit-animation: apparition-menus 3s 2s ease-in;
+          animation: apparition-menus 3s 2s ease-in;
+}
+
+.menus-desserts__item-anim-4 {
+  -webkit-animation: apparition-menus 3s 2s ease-in;
+          animation: apparition-menus 3s 2s ease-in;
+}
+
+.menus-desserts__item-anim-4 {
+  -webkit-animation: apparition-menus 3s 2s ease-in;
+          animation: apparition-menus 3s 2s ease-in;
 }
 
 @-webkit-keyframes show-selected {
@@ -842,28 +915,32 @@ body {
 @-webkit-keyframes apparition-menus {
   0% {
     opacity: 0;
-    margin-top: 20px;
+    padding-top: 20px;
   }
-  90% {
-    opacity: 0.9;
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 
 @keyframes apparition-menus {
   0% {
     opacity: 0;
-    margin-top: 20px;
+    padding-top: 20px;
   }
-  90% {
-    opacity: 0.9;
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 
@@ -1297,8 +1374,8 @@ body {
 }
 
 .restaurants__item--palette {
-  -o-object-position: 100% 108%;
-     object-position: 100% 108%;
+  -o-object-position: 100% 101%;
+     object-position: 100% 101%;
 }
 
 .restaurants__item--enchantee {
@@ -1307,8 +1384,8 @@ body {
 }
 
 .restaurants__item--francaise {
-  -o-object-position: 100% 108%;
-     object-position: 100% 108%;
+  -o-object-position: 100% 101%;
+     object-position: 100% 101%;
 }
 
 .restaurants__item--delices {
