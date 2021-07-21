@@ -653,7 +653,7 @@ body {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background: #99E2D0;
-  opacity: 0;
+  display: none;
   z-index: -2;
   position: relative;
   right: -30px;
