@@ -128,6 +128,14 @@
                 }
             }
         }
+
+        &-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation: apparition-menus 1000ms #{$i/2}s ease-in-out;
+                }
+            }
+        }
     }
 }
 
@@ -161,6 +169,14 @@
             &--prix {
                 font-weight: 600;
                 margin-right: 10px;
+            }
+        }
+
+        &-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation: apparition-menus 1000ms #{($i+3)/2}s ease-in-out;
+                }
             }
         }
     }
@@ -200,21 +216,29 @@
                 margin-right: 10px;
             }
         }
+
+        &-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation: apparition-menus 1000ms #{($i+6)/2}s ease-in-out;
+                }
+            }
+        }
     }
 }
 
 
-@for $i from 1 through 4 {
-    .menus-entrees__item-anim-#{$i} {
-        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
-    }
-    .menus-plats__item-anim-#{$i} {
-        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
-    }
-    .menus-desserts__item-anim-#{$i} {
-        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
-    }
-    .menus-desserts__item-anim-#{$i} {
-        animation: apparition-menus 3s #{$i/2}s /*cubic-bezier(0.165, 0.84, 0.44, 1)*/ ease-in;
-    }
-}
+// @for $i from 1 through 4 {
+//     .menus-entrees__item-anim-#{$i} {
+//         animation: apparition-menus 1000ms #{$i/2}s ease-in-out;
+//     }
+//     .menus-plats__item-anim-#{$i} {
+//         animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
+//     }
+//     .menus-desserts__item-anim-#{$i} {
+//         animation: apparition-menus 1000ms #{$i/4}s ease-in-out;
+//     }
+//     .menus-desserts__item-anim-#{$i} {
+//         animation: apparition-menus 1000ms #{$i/5}s ease-in-out;
+//     }
+// }
