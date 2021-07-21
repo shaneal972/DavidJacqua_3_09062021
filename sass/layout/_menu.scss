@@ -69,6 +69,7 @@
             }
 
             &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
+                display: block;
                 z-index: 1;
                 transform: translateX(-30px);
                 animation: show-selected 700ms 400ms linear forwards;
@@ -131,6 +132,8 @@
         }
 
         &-anim {
+            transform: translateX(-20px);
+
             @for $i from 1 through 4 {
                 &-#{$i} {
                     animation: apparition-menus 1000ms #{$i/2}s ease-in-out;

@@ -601,6 +601,7 @@ body {
 }
 
 .menus-entrees__item--infos:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
+  display: block;
   z-index: 1;
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
@@ -664,6 +665,11 @@ body {
 .menus-entrees__item--price-selected .fa-check-circle {
   font-size: 1.5rem;
   color: #FFF;
+}
+
+.menus-entrees__item-anim {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
 }
 
 .menus-entrees__item-anim-1 {
@@ -895,7 +901,6 @@ body {
 @-webkit-keyframes apparition-menus {
   0% {
     opacity: 0.0001;
-    padding-top: 20px;
   }
   50% {
     opacity: 0.5;
@@ -911,7 +916,6 @@ body {
 @keyframes apparition-menus {
   0% {
     opacity: 0.0001;
-    padding-top: 20px;
   }
   50% {
     opacity: 0.5;
