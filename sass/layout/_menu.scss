@@ -24,7 +24,32 @@
 
         a {
             color: #000;
-        }    
+        } 
+        
+        .menus-entrees__item-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    // transform: translateY(50px);
+                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
+                }
+            }
+        }
+        .menus-plats__item-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    // transform: translateY(50px);
+                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
+                }
+            }
+        }
+        .menus-desserts__item-anim {
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    // transform: translateY(50px);
+                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
+                }
+            }
+        }
     }
 
     &__cmd {
@@ -143,14 +168,10 @@
         }
 
         &-anim {
-            transform: translateX(-20px);
-
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    animation: apparition-menus 1000ms #{$i/2}s ease-in-out;
-                }
-            }
+            transition: all 500ms;
         }
+
+        
     }
 }
 
@@ -235,7 +256,7 @@
         &-anim {
             @for $i from 1 through 4 {
                 &-#{$i} {
-                    animation: apparition-menus 1000ms #{($i+6)/2}s ease-in-out;
+                    animation: apparition-menus 500ms #{($i)/2}s ease-in-out;
                 }
             }
         }
@@ -243,17 +264,3 @@
 }
 
 
-// @for $i from 1 through 4 {
-//     .menus-entrees__item-anim-#{$i} {
-//         animation: apparition-menus 1000ms #{$i/2}s ease-in-out;
-//     }
-//     .menus-plats__item-anim-#{$i} {
-//         animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
-//     }
-//     .menus-desserts__item-anim-#{$i} {
-//         animation: apparition-menus 1000ms #{$i/4}s ease-in-out;
-//     }
-//     .menus-desserts__item-anim-#{$i} {
-//         animation: apparition-menus 1000ms #{$i/5}s ease-in-out;
-//     }
-// }

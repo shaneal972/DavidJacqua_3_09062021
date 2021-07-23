@@ -552,6 +552,66 @@ body {
   color: #000;
 }
 
+.nos-menus__item .menus-entrees__item-anim-1 {
+  -webkit-animation: apparition-menus 1000ms 0.33333s ease-in-out;
+          animation: apparition-menus 1000ms 0.33333s ease-in-out;
+}
+
+.nos-menus__item .menus-entrees__item-anim-2 {
+  -webkit-animation: apparition-menus 1000ms 0.66667s ease-in-out;
+          animation: apparition-menus 1000ms 0.66667s ease-in-out;
+}
+
+.nos-menus__item .menus-entrees__item-anim-3 {
+  -webkit-animation: apparition-menus 1000ms 1s ease-in-out;
+          animation: apparition-menus 1000ms 1s ease-in-out;
+}
+
+.nos-menus__item .menus-entrees__item-anim-4 {
+  -webkit-animation: apparition-menus 1000ms 1.33333s ease-in-out;
+          animation: apparition-menus 1000ms 1.33333s ease-in-out;
+}
+
+.nos-menus__item .menus-plats__item-anim-1 {
+  -webkit-animation: apparition-menus 1000ms 0.33333s ease-in-out;
+          animation: apparition-menus 1000ms 0.33333s ease-in-out;
+}
+
+.nos-menus__item .menus-plats__item-anim-2 {
+  -webkit-animation: apparition-menus 1000ms 0.66667s ease-in-out;
+          animation: apparition-menus 1000ms 0.66667s ease-in-out;
+}
+
+.nos-menus__item .menus-plats__item-anim-3 {
+  -webkit-animation: apparition-menus 1000ms 1s ease-in-out;
+          animation: apparition-menus 1000ms 1s ease-in-out;
+}
+
+.nos-menus__item .menus-plats__item-anim-4 {
+  -webkit-animation: apparition-menus 1000ms 1.33333s ease-in-out;
+          animation: apparition-menus 1000ms 1.33333s ease-in-out;
+}
+
+.nos-menus__item .menus-desserts__item-anim-1 {
+  -webkit-animation: apparition-menus 1000ms 0.33333s ease-in-out;
+          animation: apparition-menus 1000ms 0.33333s ease-in-out;
+}
+
+.nos-menus__item .menus-desserts__item-anim-2 {
+  -webkit-animation: apparition-menus 1000ms 0.66667s ease-in-out;
+          animation: apparition-menus 1000ms 0.66667s ease-in-out;
+}
+
+.nos-menus__item .menus-desserts__item-anim-3 {
+  -webkit-animation: apparition-menus 1000ms 1s ease-in-out;
+          animation: apparition-menus 1000ms 1s ease-in-out;
+}
+
+.nos-menus__item .menus-desserts__item-anim-4 {
+  -webkit-animation: apparition-menus 1000ms 1.33333s ease-in-out;
+          animation: apparition-menus 1000ms 1.33333s ease-in-out;
+}
+
 .nos-menus__cmd {
   display: block;
   margin: 0 auto;
@@ -679,28 +739,8 @@ body {
 }
 
 .menus-entrees__item-anim {
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
-}
-
-.menus-entrees__item-anim-1 {
-  -webkit-animation: apparition-menus 1000ms 0.5s ease-in-out;
-          animation: apparition-menus 1000ms 0.5s ease-in-out;
-}
-
-.menus-entrees__item-anim-2 {
-  -webkit-animation: apparition-menus 1000ms 1s ease-in-out;
-          animation: apparition-menus 1000ms 1s ease-in-out;
-}
-
-.menus-entrees__item-anim-3 {
-  -webkit-animation: apparition-menus 1000ms 1.5s ease-in-out;
-          animation: apparition-menus 1000ms 1.5s ease-in-out;
-}
-
-.menus-entrees__item-anim-4 {
-  -webkit-animation: apparition-menus 1000ms 2s ease-in-out;
-          animation: apparition-menus 1000ms 2s ease-in-out;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .menus-plats__item {
@@ -806,23 +846,23 @@ body {
 }
 
 .menus-desserts__item-anim-1 {
-  -webkit-animation: apparition-menus 1000ms 3.5s ease-in-out;
-          animation: apparition-menus 1000ms 3.5s ease-in-out;
+  -webkit-animation: apparition-menus 500ms 0.5s ease-in-out;
+          animation: apparition-menus 500ms 0.5s ease-in-out;
 }
 
 .menus-desserts__item-anim-2 {
-  -webkit-animation: apparition-menus 1000ms 4s ease-in-out;
-          animation: apparition-menus 1000ms 4s ease-in-out;
+  -webkit-animation: apparition-menus 500ms 1s ease-in-out;
+          animation: apparition-menus 500ms 1s ease-in-out;
 }
 
 .menus-desserts__item-anim-3 {
-  -webkit-animation: apparition-menus 1000ms 4.5s ease-in-out;
-          animation: apparition-menus 1000ms 4.5s ease-in-out;
+  -webkit-animation: apparition-menus 500ms 1.5s ease-in-out;
+          animation: apparition-menus 500ms 1.5s ease-in-out;
 }
 
 .menus-desserts__item-anim-4 {
-  -webkit-animation: apparition-menus 1000ms 5s ease-in-out;
-          animation: apparition-menus 1000ms 5s ease-in-out;
+  -webkit-animation: apparition-menus 500ms 2s ease-in-out;
+          animation: apparition-menus 500ms 2s ease-in-out;
 }
 
 @-webkit-keyframes show-selected {
@@ -914,6 +954,8 @@ body {
 @-webkit-keyframes apparition-menus {
   0% {
     opacity: 0.0001;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   50% {
     opacity: 0.5;
@@ -929,6 +971,8 @@ body {
 @keyframes apparition-menus {
   0% {
     opacity: 0.0001;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   50% {
     opacity: 0.5;
