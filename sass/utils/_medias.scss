@@ -73,11 +73,11 @@
             &--price {
 
                 &-noselected {
-                    right: -70px;
+                    right: 15px;
                 }
 
                 &-selected {
-                    right: -58px;
+                    right: -61px;
                 }
             }
         }
@@ -150,11 +150,11 @@
             &--price {
 
                 &-noselected {
-                    right: -65px;
+                    right: 15px;
                 }
 
                 &-selected {
-                    right: -50px;
+                    right: -61px;
                 }
             }
         }
@@ -229,14 +229,15 @@
 
     .menus-entrees {
         &__item {
+            
             &--price {
 
                 &-noselected {
-                    right: -58px;
+                    right: 15px;
                 }
 
                 &-selected {
-                    right: -41px;
+                    right: -61px;
                 }
             }
         }

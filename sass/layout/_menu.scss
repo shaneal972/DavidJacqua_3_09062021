@@ -40,54 +40,66 @@
         width: 95%;
         height: 70px;
         display: flex;
+        align-items: center;
         padding-left: 10px;
         margin-bottom: 15px;
         background: #FFF;
         border-radius: 15px;
         @include shadow(2px, 5px, 7px, 1px);
+
+        &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
+            animation: show-selected 700ms 200ms ease-out forwards;
+            display: block;
+            text-align: center;
+            z-index: 1;
+        }
+
+        &:hover > .menus-entrees__item--price-noselected {
+            transform: translateX(-60px);
+            margin-left: 15px;
+        }
+
+        &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
+            animation: rotate-check 1400ms ease-in-out;
+            position: absolute;
+            left: 33%;
+            top: 33%;
+        }
+
+        &:hover > .menus-entrees__item--infos {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        
         
         &--infos {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: 73%;
+            width: 100%;
+            padding: 10px;
             margin: 0;
-            
-            
 
             &-title {
                 font-weight: 600;
                 font-size: 0.98rem;
                 margin-top: 0;
                 margin-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             &-garnitures {
                 padding-right: 10px;
-                font-size: 0.9rem;
-                white-space: nowrap;
-            }
-
-            &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
-                display: block;
-                z-index: 1;
-                transform: translateX(-30px);
-                animation: show-selected 700ms 400ms linear forwards;
-               
-            }
-
-            &:hover + .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-                animation: rotate-check 1400ms ease-in-out;
-            }
-
-            &:hover + .menus-entrees__item--price-noselected {
-                transform: translateX(-60px);
-            }
-
-            &:hover > p {
+                font-size: 0.95rem;
+                margin-right: 25px;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+
+                &-troplong {
+                    font-size: 0.85rem;
+                }
             }
         }
 
@@ -96,37 +108,36 @@
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            
 
             &-noselected {
                 align-self: flex-end;
                 margin-bottom: 13px; 
-                position: relative;
-                right: -50px;
+                position: absolute;
+                right: 15px;
                 transition: all 2000ms;
-                
-               
+
+                p {
+                    margin-left: 20px;
+                }
             }
 
             &-selected {
                 @extend %center-flex;
     
-                width: 60px;
+                width: 85px;
                 height: 70px;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 background: $tertiary-color;
-                // opacity: 0;
-                display: none;
+                opacity: 0;
                 z-index: -2;
                 position: relative;
-                right: -30px;
+                right: -60px;
                 transition: all 1000ms;
 
                 .fa-check-circle {
                     font-size: 1.5rem;
                     color: #FFF;
-                    // animation: rotate-check 1s ease-in-out;
                 }
             }
         }
