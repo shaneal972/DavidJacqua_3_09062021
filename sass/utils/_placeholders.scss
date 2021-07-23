@@ -22,3 +22,21 @@
         }
     }
 }
+
+//Animation sur coeur
+%anim-heart {
+    opacity: 1;
+    background: -webkit-linear-gradient($primary-color, $secondary-color);
+    background: linear-gradient($primary-color, $secondary-color);
+    background: -webkit-gradient(linear, center top, center bottom, from($primary-color), to($secondary-color));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+//Ellipsis sur garnitures
+%ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -16,7 +16,7 @@
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background: map-get($backgrounds, gris-fonce);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -26,14 +26,26 @@
         font-size: 1.6rem;
         font-family: $text-title-logo;
         font-weight: normal;
-        padding-right: 20px;
+        margin-left: 20px;
 
         &--court {
             padding-right: 35px;
         }
+
+        &--heart-plein {
+            opacity: 0;
+            transition: opacity 500ms;
+
+            &:hover,
+            &:active {
+                @extend %anim-heart;
+            }
+        }
     }
 
     .fa-heart {
+        position: absolute;
+        right: 15px;
         font-size: 1.3rem;
         padding-right: 25px;
     }

@@ -1,3 +1,11 @@
 @mixin shadow($offset-x, $offset-y, $blur, $spread, $color: $color-shadow) {
     box-shadow: $offset-x $offset-y $blur $spread $color;
 }
+
+@mixin anim-menu($nbre-elt) {
+    @for $i from 1 through $nbre-elt {
+        &-#{$i} {
+            animation: apparition-menus 1000ms #{$i/$nbre-elt}s ease-in-out;
+        }
+    }
+}

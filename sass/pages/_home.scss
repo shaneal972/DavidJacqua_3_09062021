@@ -149,13 +149,7 @@
 
             &:hover,
             &:active {
-                opacity: 1;
-                background: -webkit-linear-gradient($primary-color, $secondary-color);
-                background: linear-gradient($primary-color, $secondary-color);
-                background: -webkit-gradient(linear, center top, center bottom, from($primary-color), to($secondary-color));
-                background-clip: content-box;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @extend %anim-heart;
             }
         }
 

@@ -26,30 +26,12 @@
             color: #000;
         } 
         
-        .menus-entrees__item-anim {
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    // transform: translateY(50px);
-                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
-                }
-            }
-        }
-        .menus-plats__item-anim {
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    // transform: translateY(50px);
-                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
-                }
-            }
-        }
+        .menus-entrees__item-anim,
+        .menus-plats__item-anim,
         .menus-desserts__item-anim {
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    // transform: translateY(50px);
-                    animation: apparition-menus 1000ms #{$i/3}s ease-in-out;
-                }
-            }
+            @include anim-menu(4);
         }
+        
     }
 
     &__cmd {
@@ -92,9 +74,7 @@
         }
 
         &:hover > .menus-entrees__item--infos {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            @extend %ellipsis;
         }
 
         
@@ -109,18 +89,14 @@
                 font-size: 0.98rem;
                 margin-top: 0;
                 margin-bottom: 5px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                @extend %ellipsis;
             }
 
             &-garnitures {
                 padding-right: 10px;
                 font-size: 0.95rem;
                 margin-right: 25px;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @extend %ellipsis;
 
                 &-troplong {
                     font-size: 0.85rem;
@@ -207,14 +183,6 @@
                 margin-right: 10px;
             }
         }
-
-        &-anim {
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    animation: apparition-menus 1000ms #{($i+3)/2}s ease-in-out;
-                }
-            }
-        }
     }
 }
 
@@ -250,14 +218,6 @@
             &--prix {
                 font-weight: 600;
                 margin-right: 10px;
-            }
-        }
-
-        &-anim {
-            @for $i from 1 through 4 {
-                &-#{$i} {
-                    animation: apparition-menus 500ms #{($i)/2}s ease-in-out;
-                }
             }
         }
     }
