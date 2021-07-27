@@ -643,8 +643,8 @@ body {
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-  -webkit-animation: rotate-check 1400ms ease-in-out;
-          animation: rotate-check 1400ms ease-in-out;
+  -webkit-animation: rotate-check 1400ms ease-out forwards;
+          animation: rotate-check 1400ms ease-out forwards;
   position: absolute;
   left: 33%;
   top: 33%;
@@ -875,20 +875,24 @@ body {
 }
 
 @-webkit-keyframes translate-price {
-  from {
-    width: 100%;
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
-  to {
-    width: calc(100% - 50px);
+  100% {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
   }
 }
 
 @keyframes translate-price {
-  from {
-    width: 100%;
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
-  to {
-    width: calc(100% - 50px);
+  100% {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
   }
 }
 
@@ -1425,7 +1429,7 @@ footer a {
 }
 
 .navigation__footer-item--icone .fa-utensils {
-  margin-right: 24px;
+  margin-right: 22px;
 }
 
 .navigation__footer-item--icone .fa-hands-helping {

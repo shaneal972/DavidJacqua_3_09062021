@@ -31,11 +31,11 @@
 }
 
 @keyframes translate-price {
-    from {
-        width: 100%;
+    0% {
+        transform: translateX(0px);
     }
-    to {
-        width: calc(100% - 50px);
+    100% {
+        transform: translateX(-60px);
     }
 }
 
