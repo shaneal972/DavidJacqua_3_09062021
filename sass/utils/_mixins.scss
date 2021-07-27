@@ -5,7 +5,7 @@
 @mixin anim-menu($nbre-elt) {
     @for $i from 1 through $nbre-elt {
         &-#{$i} {
-            animation: apparition-menus 1000ms #{$i/$nbre-elt}s ease-in-out;
+            animation: apparition-menus 800ms #{$i/$nbre-elt}s ease-in-out;
         }
     }
 }

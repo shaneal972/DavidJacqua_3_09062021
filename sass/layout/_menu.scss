@@ -67,7 +67,7 @@
         }
 
         &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-            animation: rotate-check 1400ms ease-out forwards;
+            animation: rotate-check 1000ms ease-out forwards;
             position: absolute;
             left: 33%;
             top: 33%;
@@ -115,7 +115,7 @@
                 margin-bottom: 13px; 
                 position: absolute;
                 right: 15px;
-                transition: all 2000ms;
+                transition: all 1500ms;
 
                 p {
                     margin-left: 20px;
