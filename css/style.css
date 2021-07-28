@@ -629,8 +629,8 @@ body {
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
-  -webkit-animation: show-selected 700ms 200ms ease-out forwards;
-          animation: show-selected 700ms 200ms ease-out forwards;
+  -webkit-animation: show-selected 900ms ease-in-out forwards;
+          animation: show-selected 900ms ease-in-out forwards;
   display: block;
   text-align: center;
   z-index: 1;
@@ -643,8 +643,8 @@ body {
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-  -webkit-animation: rotate-check 1000ms ease-out forwards;
-          animation: rotate-check 1000ms ease-out forwards;
+  -webkit-animation: rotate-check 900ms ease-out forwards;
+          animation: rotate-check 900ms ease-out forwards;
   position: absolute;
   left: 33%;
   top: 33%;
@@ -709,7 +709,7 @@ body {
   opacity: 0;
   z-index: -2;
   position: relative;
-  right: -60px;
+  right: 0px;
   -webkit-transition: all 1000ms;
   transition: all 1000ms;
 }
@@ -813,19 +813,15 @@ body {
     -webkit-transform: translateX(30px);
             transform: translateX(30px);
   }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0.5;
+  99% {
+    opacity: 0.9;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -836,19 +832,15 @@ body {
     -webkit-transform: translateX(30px);
             transform: translateX(30px);
   }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  75% {
-    opacity: 0.5;
+  99% {
+    opacity: 0.9;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -875,22 +867,22 @@ body {
 }
 
 @-webkit-keyframes translate-price {
-  0% {
+  from {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
-  100% {
+  to {
     -webkit-transform: translateX(-60px);
             transform: translateX(-60px);
   }
 }
 
 @keyframes translate-price {
-  0% {
+  from {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
-  100% {
+  to {
     -webkit-transform: translateX(-60px);
             transform: translateX(-60px);
   }

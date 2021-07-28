@@ -55,19 +55,20 @@
         @include shadow(2px, 5px, 7px, 1px);
 
         &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
-            animation: show-selected 700ms 200ms ease-out forwards;
+            animation: show-selected 900ms ease-in-out forwards;
             display: block;
             text-align: center;
             z-index: 1;
         }
 
         &:hover > .menus-entrees__item--price-noselected {
+            // animation: translate-price 1000ms 200ms ease-in-out forwards;
             transform: translateX(-60px);
             margin-left: 15px;
         }
 
         &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-            animation: rotate-check 1000ms ease-out forwards;
+            animation: rotate-check 900ms ease-out forwards;
             position: absolute;
             left: 33%;
             top: 33%;
@@ -133,7 +134,7 @@
                 opacity: 0;
                 z-index: -2;
                 position: relative;
-                right: -60px;
+                right: 0px;
                 transition: all 1000ms;
 
                 .fa-check-circle {
