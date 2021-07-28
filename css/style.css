@@ -1717,11 +1717,10 @@ footer a {
     opacity: 0;
   }
   100% {
-    z-index: -10;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    visibility: hidden;
   }
 }
 
@@ -1733,11 +1732,10 @@ footer a {
     opacity: 0;
   }
   100% {
-    z-index: -10;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    visibility: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
