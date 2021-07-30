@@ -2,15 +2,11 @@
     0% {
         display: block;
         opacity: 0;
-        transform: translateX(30px);
-    }
-    99% {
-        opacity: 0.9;
-        transform: translateX(0px);
+        width: 0;
     }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        width: 80px;
     }
 }
 

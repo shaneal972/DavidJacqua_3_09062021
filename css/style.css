@@ -629,22 +629,22 @@ body {
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected {
-  -webkit-animation: show-selected 900ms ease-in-out forwards;
-          animation: show-selected 900ms ease-in-out forwards;
+  -webkit-animation: show-selected 500ms ease-in-out forwards;
+          animation: show-selected 500ms ease-in-out forwards;
   display: block;
   text-align: center;
   z-index: 1;
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected {
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  margin-left: 15px;
+  -webkit-animation: translate-price 500ms 100ms ease-out forwards;
+          animation: translate-price 500ms 100ms ease-out forwards;
+  margin-left: 20px;
 }
 
 .menus-entrees__item:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-  -webkit-animation: rotate-check 900ms ease-out forwards;
-          animation: rotate-check 900ms ease-out forwards;
+  -webkit-animation: rotate-check 700ms ease-out forwards;
+          animation: rotate-check 700ms ease-out forwards;
   position: absolute;
   left: 33%;
   top: 33%;
@@ -710,8 +710,8 @@ body {
   z-index: -2;
   position: relative;
   right: 0px;
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
 }
 
 .menus-entrees__item--price-selected .fa-check-circle {
@@ -810,18 +810,11 @@ body {
   0% {
     display: block;
     opacity: 0;
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
-  }
-  99% {
-    opacity: 0.9;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    width: 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    width: 80px;
   }
 }
 
@@ -829,18 +822,11 @@ body {
   0% {
     display: block;
     opacity: 0;
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
-  }
-  99% {
-    opacity: 0.9;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    width: 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    width: 80px;
   }
 }
 
@@ -977,7 +963,7 @@ body {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1043,7 +1029,7 @@ body {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1106,7 +1092,7 @@ body {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1483,7 +1469,7 @@ footer a {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1549,7 +1535,7 @@ footer a {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1612,7 +1598,7 @@ footer a {
     right: 15px;
   }
   .menus-entrees__item--price-selected {
-    right: -61px;
+    right: 0px;
   }
   .menus-entrees,
   .menus-plats,
@@ -1641,8 +1627,8 @@ footer a {
   width: 100vw;
   height: 100vh;
   background-color: #99E2D0;
-  -webkit-animation: loaderEnd 3s ease-out forwards;
-          animation: loaderEnd 3s ease-out forwards;
+  -webkit-animation: loaderEnd 3s ease-in-out forwards;
+          animation: loaderEnd 3s ease-in-out forwards;
 }
 
 .loading {
@@ -1713,14 +1699,15 @@ footer a {
   0% {
     opacity: 1;
   }
-  90% {
-    opacity: 0;
+  50% {
+    opacity: 0.5;
   }
   100% {
     visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
   }
 }
 
@@ -1728,14 +1715,15 @@ footer a {
   0% {
     opacity: 1;
   }
-  90% {
-    opacity: 0;
+  50% {
+    opacity: 0.5;
   }
   100% {
     visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
