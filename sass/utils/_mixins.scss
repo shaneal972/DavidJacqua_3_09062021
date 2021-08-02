@@ -1,7 +1,9 @@
+// met en place une ombre sur un element
 @mixin shadow($offset-x, $offset-y, $blur, $spread, $color: $color-shadow) {
     box-shadow: $offset-x $offset-y $blur $spread $color;
 }
 
+// permet d'inclure l'animation des menus
 @mixin anim-menu($nbre-elt) {
     @for $i from 1 through $nbre-elt {
         &-#{$i} {

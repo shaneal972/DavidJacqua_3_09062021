@@ -63,12 +63,11 @@
 
         &:hover > .menus-entrees__item--price-noselected {
             animation: translate-price 500ms 100ms ease-out forwards;
-            // transform: translateX(-60px);
             margin-left: 20px;
         }
 
         &:hover > .menus-entrees__item--price-noselected + .menus-entrees__item--price-selected .fa-check-circle {
-            animation: rotate-check 700ms ease-out forwards;
+            animation: rotate-check 500ms ease-out forwards;
             position: absolute;
             left: 33%;
             top: 33%;

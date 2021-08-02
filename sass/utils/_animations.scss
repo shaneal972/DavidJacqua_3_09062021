@@ -1,3 +1,4 @@
+// animation pour faire apparaître le checked du pris sélectionné
 @keyframes show-selected {
     0% {
         display: block;
@@ -6,10 +7,11 @@
     }
     100% {
         opacity: 1;
-        width: 80px;
+        width: 85px;
     }
 }
 
+// animation pour faire tourner le checked de la sélection du prix
 @keyframes rotate-check {
     from {
         transform: rotate(0);
@@ -19,6 +21,7 @@
     }
 }
 
+// animation pour faire glisser le prix vers la gauche
 @keyframes translate-price {
     from{
         transform: translateX(0px);
@@ -28,6 +31,7 @@
     }
 }
 
+// animation pour faire apparaître les menus des pages restaurants
 @keyframes apparition-menus {
     0% {
         opacity: 0.0001;
