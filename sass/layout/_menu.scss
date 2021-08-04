@@ -21,17 +21,19 @@
     }
 
     &__item {
-
+        visibility: hidden;
         a {
             color: #000;
         } 
-        
+        animation: show-menu 500ms 1500ms ease-in-out forwards;
+
         .menus-entrees__item-anim,
         .menus-plats__item-anim,
-        .menus-desserts__item-anim {
+        .menus-desserts__item-anim {            
             @include anim-menu(4);
         }
-        
+
+
     }
 
     &__cmd {
