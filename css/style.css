@@ -1621,6 +1621,12 @@ footer a {
   }
 }
 
+.container {
+  height: 0;
+  -webkit-animation: show-page 3000ms ease-out forwards;
+          animation: show-page 3000ms ease-out forwards;
+}
+
 .spinner {
   overflow-x: hidden;
   overflow-y: auto;
@@ -1724,6 +1730,24 @@ footer a {
     top: 0;
     left: 0;
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes show-page {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+@keyframes show-page {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
